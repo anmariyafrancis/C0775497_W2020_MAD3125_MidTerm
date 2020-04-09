@@ -1,18 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".PersonInfoEntryActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".PersonInfoEntryActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+        <androidx.core.widget.NestedScrollView
+        android:layout_width="409dp"
+        android:layout_height="728dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="120dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/txtSinNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="Enter Sin Number "
+                android:inputType="textPersonName"
+                android:text="" />
+
+            <EditText
+                android:id="@+id/txtFirstName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtSinNumber"
+                android:ems="10"
+                android:hint="First Name" />
+
+            <EditText
+                android:id="@+id/txtLastName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtSinNumber"
+                android:layout_toRightOf="@+id/txtFirstName"
+                android:ems="10"
+                android:hint="Last Name" />
+
+            <EditText
+                android:id="@+id/txtBirthDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtLastName"
+                android:ems="10"
+                android:hint="Select Birth Date" />
+
+            <RadioGroup
+                android:id="@+id/rdGrpGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtBirthDate"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rdMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:id="@+id/rdFeMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female" />
+
+                <RadioButton
+                    android:id="@+id/rdOther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Other" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/lblTaxFillDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rdGrpGender"
+                android:ems="10"
+                android:text="Tax Fill Date"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/txtTaxFillDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rdGrpGender"
+                android:layout_toRightOf="@+id/lblTaxFillDate"
+                android:ems="10"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/txtGrossIncome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtTaxFillDate"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/ic_action_name"
+                android:ems="10"
+                android:hint="Enter Gross Income"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/txtRrsp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtGrossIncome"
+                android:drawableLeft="@drawable/ic_action_name"
+                android:ems="10"
+                android:hint="Enter RRSP Contributed" />
+
+            <Button
+                android:id="@+id/btnCalculate"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/txtRrsp"
+                android:layout_marginEnd="136dp"
+                android:layout_marginStart="133dp"
+                android:layout_marginTop="43dp"
+                android:background="#9C27B0"
+                android:gravity="center"
+                android:text="CALCULATE"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/btnCalculate"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="-52dp"
+                android:layout_marginEnd="27dp"
+                android:layout_marginBottom="68dp"
+                app:srcCompat="@drawable/dollar" />
+
+        </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+            </androidx.constraintlayout.widget.ConstraintLayout>

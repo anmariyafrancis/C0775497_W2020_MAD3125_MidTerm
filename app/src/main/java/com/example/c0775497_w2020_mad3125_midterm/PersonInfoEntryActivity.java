@@ -90,5 +90,14 @@ public class PersonInfoEntryActivity extends AppCompatActivity {
             }
 
         });
+        btnCalculate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fieldIsEmpty();
+            }
+        });
+    }
+
+    private void fieldIsEmpty() {
     }
 }

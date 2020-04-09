@@ -43,7 +43,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/lblFullName"
+                    android:id="@+id/txtFullName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="2"
@@ -69,7 +69,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/lblSinNumber"
+                    android:id="@+id/txtSinNumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="2"
@@ -93,7 +93,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/lblBirthDate"
+                    android:id="@+id/txtBirthDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="2"
@@ -117,7 +117,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/lblAge"
+                    android:id="@+id/txtAge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="2"
@@ -141,7 +141,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/lblGender"
+                    android:id="@+id/txtGender"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="2"
@@ -165,7 +165,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/lblTaxFillDate"
+                    android:id="@+id/txtTaxFillDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="2"
@@ -189,7 +189,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/lblGrossIncome"
+                    android:id="@+id/txtGrossIncome"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="2"
@@ -213,7 +213,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/lblFederalTax"
+                    android:id="@+id/txtFederalTax"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="2"
@@ -237,7 +237,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/lblProvincialTax"
+                    android:id="@+id/txtProvincialTax"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="2"
@@ -261,7 +261,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/lblCpp"
+                    android:id="@+id/txtCpp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="2"
@@ -285,7 +285,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/lblEi"
+                    android:id="@+id/txtEi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="2"
@@ -309,7 +309,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/lblRrsContributed"
+                    android:id="@+id/txtRrsp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="2"
@@ -333,7 +333,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/lblCarryRrs"
+                    android:id="@+id/txtCarry"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="2"
@@ -357,7 +357,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/lblTotalTaxIncome"
+                    android:id="@+id/txtTotalTaxIncome"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="2"
@@ -381,7 +381,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/lblTaxPayed"
+                    android:id="@+id/txtTaxPayed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="2"

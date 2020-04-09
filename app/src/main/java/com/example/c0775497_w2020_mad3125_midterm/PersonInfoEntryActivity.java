@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;
+import android.text.InputType;
+import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -38,6 +41,7 @@ public class PersonInfoEntryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         edtFirstName = findViewById(R.id.txtFirstName);
         edtLastName = findViewById(R.id.txtLastName);
         edtSinNumber = findViewById(R.id.txtSinNumber);
@@ -49,6 +53,13 @@ public class PersonInfoEntryActivity extends AppCompatActivity {
         edtRRSP =findViewById(R.id.txtRrsp);
         edtDOB = findViewById(R.id.txtBirthDate);
         edtTaxFiledDate = findViewById(R.id.txtTaxFillDate);
+        btnCalculate = findViewById(R.id.btnCalculate);
+
+        edtTaxFiledDate.setText(new StringBuilder()
+                .append(day).append(" ").append("-").append(month + 1).append("-")
+                .append(year));
+
+
 
     }
 }

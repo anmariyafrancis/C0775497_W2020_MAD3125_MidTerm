@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -135,5 +136,17 @@ public class PersonInfoEntryActivity extends AppCompatActivity {
             Flag = true;
             return;
         }
+    }
+    int calculateAge(String date){
+        Calendar dob = Calendar.getInstance();
+        Calendar today = Calendar.getInstance();
+
+        int age = today.get(Calendar.YEAR) - dob.get(Calendar.YEAR);
+        String agee= String.valueOf(age);
+        Toast.makeText(PersonInfoEntryActivity.this, agee, Toast.LENGTH_SHORT).show();
+        if(today.get(Calendar.DAY_OF_MONTH) < dob.get(Calendar.DAY_OF_MONTH)){
+            age--;
+        }
+        return age;
     }
 }

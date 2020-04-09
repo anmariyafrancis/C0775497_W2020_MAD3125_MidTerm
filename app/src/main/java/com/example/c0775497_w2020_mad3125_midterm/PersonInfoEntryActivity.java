@@ -99,5 +99,41 @@ public class PersonInfoEntryActivity extends AppCompatActivity {
     }
 
     private void fieldIsEmpty() {
+        boolean Flag = false;
+        if(edtSinNumber.getText().toString().isEmpty())
+        {
+            edtSinNumber.setError("Please enter valid SIN");
+            Flag = true;
+            return;
+        }
+        if(edtFirstName.getText().toString().isEmpty()){
+            edtFirstName.setError("Please enter your first name");
+            Flag = true;
+            return;
+        }
+        if(edtLastName.getText().toString().isEmpty())
+        {
+            edtLastName.setError("Please enter your last name");
+            Flag = true;
+            return;
+        }
+        if(edtDOB.getText().toString().isEmpty())
+        {
+            edtDOB.setError("Please enter correct date of birth");
+            Flag = true;
+            return;
+        }
+        if(edtGrossIncome.getText().toString().isEmpty())
+        {
+            edtGrossIncome.setError("Please enter your Gross Income");
+            Flag = true;
+            return;
+        }
+        if(edtRRSP.getText().toString().isEmpty())
+        {
+            edtRRSP.setError("Please enter your RRSP");
+            Flag = true;
+            return;
+        }
     }
 }

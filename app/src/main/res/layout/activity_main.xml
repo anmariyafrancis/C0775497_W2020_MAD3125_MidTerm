@@ -9,22 +9,40 @@
         <androidx.core.widget.NestedScrollView
         android:layout_width="409dp"
         android:layout_height="728dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
+        android:layout_marginStart="1dp"
+            android:background="#D2F8F3BF"
         android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="120dp"
             android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnCalculate"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/txtRrsp"
+                android:layout_marginEnd="136dp"
+                android:layout_marginStart="133dp"
+                android:layout_marginTop="43dp"
+                android:background="#9C27B0"
+                android:gravity="center"
+                android:text="CALCULATE"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/txtSinNumber"
@@ -60,6 +78,38 @@
                 android:layout_below="@+id/txtLastName"
                 android:ems="10"
                 android:hint="Select Birth Date" />
+
+            <EditText
+                android:id="@+id/txtGrossIncome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtTaxFillDate"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="Enter Gross Income"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/txtRrsp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtGrossIncome"
+                android:ems="10"
+                android:hint="Enter RRSP Contributed" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="312dp"
+                android:layout_height="100dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btnCalculate"
+                android:layout_marginBottom="132dp"
+                android:layout_marginEnd="34dp"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="-29dp"
+                app:srcCompat="@drawable/ca" />
 
             <RadioGroup
                 android:id="@+id/rdGrpGender"
@@ -104,58 +154,6 @@
                 android:layout_toRightOf="@+id/lblTaxFillDate"
                 android:ems="10"
                 android:textSize="20dp" />
-
-            <EditText
-                android:id="@+id/txtGrossIncome"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/txtTaxFillDate"
-                android:layout_marginTop="10dp"
-                android:drawableLeft="@drawable/ic_action_name"
-                android:ems="10"
-                android:hint="Enter Gross Income"
-                android:inputType="numberDecimal" />
-
-            <EditText
-                android:id="@+id/txtRrsp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/txtGrossIncome"
-                android:drawableLeft="@drawable/ic_action_name"
-                android:ems="10"
-                android:hint="Enter RRSP Contributed" />
-
-            <Button
-                android:id="@+id/btnCalculate"
-                android:layout_width="140dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/txtRrsp"
-                android:layout_marginEnd="136dp"
-                android:layout_marginStart="133dp"
-                android:layout_marginTop="43dp"
-                android:background="#9C27B0"
-                android:gravity="center"
-                android:text="CALCULATE"
-                android:textAllCaps="false"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="312dp"
-                android:layout_height="100dp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/btnCalculate"
-                android:layout_marginBottom="132dp"
-                android:layout_marginEnd="34dp"
-                android:layout_marginStart="65dp"
-                android:layout_marginTop="-29dp"
-                app:srcCompat="@drawable/ca" />
 
         </RelativeLayout>
         </androidx.core.widget.NestedScrollView>

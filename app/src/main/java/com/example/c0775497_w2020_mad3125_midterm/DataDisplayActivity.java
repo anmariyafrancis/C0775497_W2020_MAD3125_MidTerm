@@ -43,7 +43,7 @@ public class DataDisplayActivity extends AppCompatActivity {
         CRACustomer customer = mIntent.getParcelableExtra("CRACustomer");
 
         txtSin.setText( customer.getSinNumber());
-        txtFullName.setText( customer.getFull_name());
+        txtFullName.setText( customer.getFullName());
         txtGender.setText(getIntent().getStringExtra("gender"));
         txtGrossIncome.setText(String.valueOf(customer.getGrossIncome()));
         txtRrsp.setText(String.valueOf(customer.getRrspContribution()));

@@ -53,6 +53,14 @@ public class CRACustomer {
         this.lastName = lastName;
     }
 
+    public String getFullName() {
+        return getFirstName()+getLastName();
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
     public Date getBirthDate() {
         return birthDate;
     }

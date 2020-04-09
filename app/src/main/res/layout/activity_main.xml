@@ -145,17 +145,17 @@
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@+id/btnCalculate"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
+                android:layout_width="312dp"
+                android:layout_height="100dp"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="33dp"
-                android:layout_marginTop="-52dp"
-                android:layout_marginEnd="27dp"
-                android:layout_marginBottom="68dp"
-                app:srcCompat="@drawable/dollar" />
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btnCalculate"
+                android:layout_marginBottom="132dp"
+                android:layout_marginEnd="34dp"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="-29dp"
+                app:srcCompat="@drawable/ca" />
 
         </RelativeLayout>
         </androidx.core.widget.NestedScrollView>

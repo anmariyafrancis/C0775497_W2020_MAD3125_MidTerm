@@ -20,5 +20,21 @@ public class DataDisplayActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data_display);
+
+        txtSin = findViewById(R.id.txtSinNumber);
+        txtFullName = findViewById(R.id.txtFullName);
+        txtBirthDate = findViewById(R.id.txtBirthDate);
+        txtAge = findViewById(R.id.txtAge);
+        txtGender = findViewById(R.id.txtGender);
+        txtTaxFilingDate = findViewById(R.id.txtTaxFillDate);
+        txtGrossIncome = findViewById(R.id.txtGrossIncome);
+        txtRrsp = findViewById(R.id.txtRrsp);
+        lblRRSPCarryFwd = findViewById(R.id.txtCarry);
+        txtFederalTax = findViewById(R.id.txtFederalTax);
+        txtProvincialTax = findViewById(R.id.txtProvincialTax);
+        txtEi = findViewById(R.id.txtEi);
+        txtCpp = findViewById(R.id.txtCpp);
+        txtTaxableIncome = findViewById(R.id.txtTotalTaxIncome);
+        txtTaxPayed = findViewById(R.id.txtTaxPayed);
     }
 }

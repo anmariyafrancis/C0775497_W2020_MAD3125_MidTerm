@@ -59,7 +59,22 @@ public class PersonInfoEntryActivity extends AppCompatActivity {
                 .append(day).append(" ").append("-").append(month + 1).append("-")
                 .append(year));
 
+        edtDOB.setInputType(InputType.TYPE_NULL);
+        edtDOB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                picker = new DatePickerDialog(PersonInfoEntryActivity.this,
+                        new DatePickerDialog.OnDateSetListener() {
 
 
+                            @Override
+                            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                                edtDOB.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+
+                            }
+                        }, year, month, day);
+                picker.show();
+            }
+        });
     }
 }

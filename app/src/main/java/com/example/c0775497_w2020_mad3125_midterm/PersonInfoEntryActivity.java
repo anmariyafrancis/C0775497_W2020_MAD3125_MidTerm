@@ -38,5 +38,13 @@ public class PersonInfoEntryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        edtFirstName = findViewById(R.id.txtFirstName);
+        edtLastName = findViewById(R.id.txtLastName);
+        edtSinNumber = findViewById(R.id.txtSinNumber);
+        rdGender = findViewById(R.id.rdGrpGender);
+        rbtnMale = findViewById(R.id.rdMale);
+        rbtnFemale = findViewById(R.id.rdFeMale);
+        rbtnOther = findViewById(R.id.rdOther);
+
     }
 }

@@ -15,7 +15,17 @@ public class CRACustomer {
     private Double provincialTax;
     private Double cpp;
     private Double ei;
+    private Double rrspContribution;
     private Double totalTaxableIncome;
     private Double totalTaxPayed;
+
+    public CRACustomer(String sinNumber,String firstName,String lastName,String gender,Double grossIncome,Double rrspContribution){
+        this.sinNumber=sinNumber;
+        this.firstName=firstName;
+        this.lastName=lastName;
+        this.gender=gender;
+        this.grossIncome=grossIncome;
+        this.rrspContribution=rrspContribution;
+    }
 }
 

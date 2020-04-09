@@ -45,6 +45,10 @@ public class PersonInfoEntryActivity extends AppCompatActivity {
         rbtnMale = findViewById(R.id.rdMale);
         rbtnFemale = findViewById(R.id.rdFeMale);
         rbtnOther = findViewById(R.id.rdOther);
+        edtGrossIncome = findViewById(R.id.txtGrossIncome);
+        edtRRSP =findViewById(R.id.txtRrsp);
+        edtDOB = findViewById(R.id.txtBirthDate);
+        edtTaxFiledDate = findViewById(R.id.txtTaxFillDate);
 
     }
 }

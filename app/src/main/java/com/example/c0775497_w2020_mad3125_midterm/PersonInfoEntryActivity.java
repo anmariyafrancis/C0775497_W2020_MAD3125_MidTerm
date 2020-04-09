@@ -76,5 +76,19 @@ public class PersonInfoEntryActivity extends AppCompatActivity {
                 picker.show();
             }
         });
+        rdGender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if(i == R.id.rdMale){
+                    gender = rbtnMale.getText().toString();
+                }else if(i == R.id.rdFeMale){
+                    gender = rbtnFemale.getText().toString();
+                }else {
+                    gender = rbtnOther.getText().toString();
+                }
+            }
+
+        });
     }
 }

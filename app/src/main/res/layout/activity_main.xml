@@ -135,11 +135,11 @@
                 android:textSize="20dp" />
 
             <TextView
-                android:id="@+id/txtTaxFillDate"
+                android:id="@+id/txtTaxFill"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/rdGrpGender"
-                android:layout_toRightOf="@+id/lblTaxFillDate"
+                android:layout_toRightOf="@+id/txtTaxFillDate"
                 android:ems="10"
                 android:textSize="20dp" />
 

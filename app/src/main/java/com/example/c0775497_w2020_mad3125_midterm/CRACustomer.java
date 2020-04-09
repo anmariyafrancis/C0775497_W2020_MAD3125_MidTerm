@@ -6,6 +6,7 @@ public class CRACustomer {
     private String sinNumber;
     private String firstName;
     private String lastName;
+    private String fullName;
     private Date birthDate;
     private String gender;
     private String age;

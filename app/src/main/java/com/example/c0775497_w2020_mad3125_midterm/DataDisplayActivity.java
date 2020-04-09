@@ -87,7 +87,6 @@ public class DataDisplayActivity extends AppCompatActivity {
         double calculateProvincial = calculateProvincialTax();
         txtProvincialTax.setText(String.format("%.2f",calculateProvincial));
 
-        //Total
         totalTaxPaid = calculateFederal+ calculateProvincial;
 
         lblTaxPayed.setText( String.format("%.2f",totalTaxPaid));

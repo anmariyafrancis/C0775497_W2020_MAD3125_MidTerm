@@ -1,4 +1,4 @@
-package com.example.c0775497_w2020_mad3125_midterm;
+package com.example.c0775497_w2020_mad3125_midterm.models;
 
 import java.util.Date;
 

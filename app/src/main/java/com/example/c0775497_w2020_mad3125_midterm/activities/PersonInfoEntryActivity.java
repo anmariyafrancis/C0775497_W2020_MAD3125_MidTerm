@@ -1,4 +1,4 @@
-package com.example.c0775497_w2020_mad3125_midterm;
+package com.example.c0775497_w2020_mad3125_midterm.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,6 +13,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.c0775497_w2020_mad3125_midterm.R;
 
 import java.util.Calendar;
 

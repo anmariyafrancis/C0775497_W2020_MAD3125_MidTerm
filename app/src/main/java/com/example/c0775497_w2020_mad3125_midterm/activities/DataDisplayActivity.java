@@ -1,4 +1,4 @@
-package com.example.c0775497_w2020_mad3125_midterm;
+package com.example.c0775497_w2020_mad3125_midterm.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.example.c0775497_w2020_mad3125_midterm.R;
+import com.example.c0775497_w2020_mad3125_midterm.models.CRACustomer;
 
 public class DataDisplayActivity extends AppCompatActivity {
 

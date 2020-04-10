@@ -10,6 +10,9 @@ import android.widget.TextView;
 import com.example.c0775497_w2020_mad3125_midterm.R;
 import com.example.c0775497_w2020_mad3125_midterm.models.CRACustomer;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 public class DataDisplayActivity extends AppCompatActivity {
 
     private TextView txtSin,txtFullName,txtBirthDate,txtAge,txtGender;
@@ -46,9 +49,20 @@ public class DataDisplayActivity extends AppCompatActivity {
         Intent mIntent = getIntent();
         CRACustomer customer = mIntent.getParcelableExtra("CRACustomer");
 
+        SimpleDateFormat dfDate_day= new SimpleDateFormat("E, dd/MM/yyyy");
+        String dt="";
+        Calendar c = Calendar.getInstance();
+        dt = dfDate_day.format(c.getTime());
+        txtTaxFilingDate.setText(dt);
+
         txtSin.setText( customer.getSinNumber());
         txtFullName.setText( customer.getFullName());
         txtGender.setText(getIntent().getStringExtra("gender"));
+        txtAge.setText(getIntent().getStringExtra("age"));
+        if(txtAge.equals(null))
+        {
+            txtAge.setText("Not Eligible for Paying Tax");
+        }
         txtGrossIncome.setText(String.valueOf(customer.getGrossIncome()));
         txtRrsp.setText(String.valueOf(customer.getRrspContribution()));
 

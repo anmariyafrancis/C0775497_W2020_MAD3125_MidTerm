@@ -3,6 +3,7 @@ package com.example.c0775497_w2020_mad3125_midterm.activities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
@@ -17,6 +18,7 @@ import android.widget.Toast;
 import com.example.c0775497_w2020_mad3125_midterm.R;
 
 import java.util.Calendar;
+import java.util.Date;
 
 public class PersonInfoEntryActivity extends AppCompatActivity {
 
@@ -151,4 +153,21 @@ public class PersonInfoEntryActivity extends AppCompatActivity {
         }
         return age;
     }
+
+    public String getCurrentDate() {
+
+        StringBuilder todaydate=new StringBuilder();
+        Calendar today=Calendar.getInstance();
+        int age=today.get(Calendar.YEAR)-picker.getDatePicker().getYear();
+        if (today.get(Calendar.MONTH) < picker.getDatePicker().getYear()) {
+            age--;
+        } else if (today.get(Calendar.MONTH) == picker.getDatePicker().getYear()
+                && today.get(Calendar.DAY_OF_MONTH) < picker.getDatePicker().getYear()) {
+            age--;
+        }
+        todaydate.append(String.valueOf(age));
+        return todaydate.toString();
+    }
+    Date date=java.util.Calendar.getInstance().getTime();
+    String taxFiledDate = date.toString();
 }

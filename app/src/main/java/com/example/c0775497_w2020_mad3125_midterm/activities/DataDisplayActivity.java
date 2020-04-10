@@ -61,7 +61,7 @@ public class DataDisplayActivity extends AppCompatActivity {
         txtAge.setText(getIntent().getStringExtra("age"));
         if(txtAge.equals(null))
         {
-            txtAge.setText("Not Eligible for Paying Tax");
+            txtAge.setText(" You are not eligible for paying tax");
         }
         txtGrossIncome.setText(String.valueOf(customer.getGrossIncome()));
         txtRrsp.setText(String.valueOf(customer.getRrspContribution()));

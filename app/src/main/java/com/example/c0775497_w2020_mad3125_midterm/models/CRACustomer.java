@@ -5,7 +5,7 @@ import android.os.Parcelable;
 
 import java.util.Date;
 
-public class CRACustomer {
+public class CRACustomer implements Parcelable{
     private String sinNumber;
     private String firstName;
     private String lastName;
@@ -187,6 +187,11 @@ public class CRACustomer {
             return new CRACustomer[size];
         }
     };
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {

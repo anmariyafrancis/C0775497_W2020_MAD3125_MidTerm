@@ -16,7 +16,7 @@ import java.util.Calendar;
 public class DataDisplayActivity extends AppCompatActivity {
 
     private TextView txtSin,txtFullName,txtBirthDate,txtAge,txtGender;
-    private TextView txtTaxFilingDate,txtGrossIncome,txtRrsp,lblRRSPCarryFwd;
+    private TextView txtTaxFilingDate,txtGrossIncome,txtRrsp,txtRrspCarryForward;
     private TextView txtFederalTax,txtProvincialTax,txtEi,txtCpp,txtTaxableIncome,txtTaxPayed;
 
     double cpp = 0;
@@ -38,7 +38,7 @@ public class DataDisplayActivity extends AppCompatActivity {
         txtTaxFilingDate = findViewById(R.id.txtTaxFillDate);
         txtGrossIncome = findViewById(R.id.txtGrossIncome);
         txtRrsp = findViewById(R.id.txtRrsp);
-        lblRRSPCarryFwd = findViewById(R.id.txtCarry);
+        txtRrspCarryForward = findViewById(R.id.txtRrspCarryForward);
         txtFederalTax = findViewById(R.id.txtFederalTax);
         txtProvincialTax = findViewById(R.id.txtProvincialTax);
         txtEi = findViewById(R.id.txtEi);
@@ -88,12 +88,12 @@ public class DataDisplayActivity extends AppCompatActivity {
 
         if(rrspCarryFwd < 0)
         {
-            lblRRSPCarryFwd.setTextColor(Color.RED);
-            lblRRSPCarryFwd.setText(String.format("%.2f",rrspCarryFwd));
+            txtRrspCarryForward.setTextColor(Color.RED);
+            txtRrspCarryForward.setText(String.format("%.2f",rrspCarryFwd));
         }
         else
         {
-            lblRRSPCarryFwd.setText(String.format("%.2f",rrspCarryFwd));
+            txtRrspCarryForward.setText(String.format("%.2f",rrspCarryFwd));
         }
 
         taxableIncome = grossIncome - (cpp + ei + rrsp);

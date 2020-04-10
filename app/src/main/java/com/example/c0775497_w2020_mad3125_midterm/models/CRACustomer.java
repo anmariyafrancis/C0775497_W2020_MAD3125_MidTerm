@@ -1,6 +1,7 @@
 package com.example.c0775497_w2020_mad3125_midterm.models;
 
 import android.os.Parcel;
+import android.os.Parcelable;
 
 import java.util.Date;
 
@@ -18,6 +19,7 @@ public class CRACustomer {
     private Double provincialTax;
     private Double cpp;
     private Double ei;
+    private Double rrspCarryForward;
     private Double rrspContribution;
     private Double totalTaxableIncome;
     private Double totalTaxPayed;
@@ -172,8 +174,34 @@ public class CRACustomer {
         ei = parcel.readDouble();
         totalTaxableIncome = parcel.readDouble();
         totalTaxPayed = parcel.readDouble();
-
     }
 
+    public static final Parcelable.Creator<CRACustomer> CREATOR = new Parcelable.Creator<CRACustomer>() {
+        @Override
+        public CRACustomer createFromParcel(Parcel parcel) {
+            return new CRACustomer(parcel);
+        }
+
+        @Override
+        public CRACustomer[] newArray(int size) {
+            return new CRACustomer[size];
+        }
+    };
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(sinNumber);
+        dest.writeString(firstName);
+        dest.writeString(lastName);
+        dest.writeString(gender);
+        dest.writeDouble(provincialTax);
+        dest.writeDouble(federalTax);
+        dest.writeDouble(rrspCarryForward);
+        dest.writeDouble(grossIncome);
+        dest.writeDouble(rrspContribution);
+        dest.writeDouble(ei);
+        dest.writeDouble(totalTaxableIncome);
+        dest.writeDouble(totalTaxPayed);
+    }
 }
 

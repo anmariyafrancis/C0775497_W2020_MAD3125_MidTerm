@@ -20,6 +20,7 @@ public class DataDisplayActivity extends AppCompatActivity {
     double ei = 0;
     double rrsp = 0, rrspContribution = 0, rrspCarryFwd = 0;
     double taxableIncome, federalTax, provincialTax, totalTaxPaid;
+    int minAge = 18;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

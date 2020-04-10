@@ -3,7 +3,9 @@ package com.example.c0775497_w2020_mad3125_midterm.models;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.text.NumberFormat;
 import java.util.Date;
+import java.util.Locale;
 
 public class CRACustomer implements Parcelable{
     private String sinNumber;
@@ -174,6 +176,12 @@ public class CRACustomer implements Parcelable{
         ei = parcel.readDouble();
         totalTaxableIncome = parcel.readDouble();
         totalTaxPayed = parcel.readDouble();
+    }
+
+    public String amountFormatter() {
+        NumberFormat nf = NumberFormat.getInstance(new Locale("en", "US"));
+        String val = nf.format("$" + this);
+        return val;
     }
 
     public static final Parcelable.Creator<CRACustomer> CREATOR = new Parcelable.Creator<CRACustomer>() {

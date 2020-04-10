@@ -1,5 +1,7 @@
 package com.example.c0775497_w2020_mad3125_midterm.models;
 
+import android.os.Parcel;
+
 import java.util.Date;
 
 public class CRACustomer {
@@ -156,5 +158,22 @@ public class CRACustomer {
     public void setTotalTaxPayed(Double totalTaxPayed) {
         this.totalTaxPayed = totalTaxPayed;
     }
+
+    protected CRACustomer(Parcel parcel) {
+        sinNumber = parcel.readString();
+        firstName = parcel.readString();
+        lastName = parcel.readString();
+        gender = parcel.readString();
+        provincialTax = parcel.readDouble();
+        federalTax = parcel.readDouble();
+        rrspContribution = parcel.readDouble();
+        grossIncome = parcel.readDouble();
+        rrspContribution = parcel.readDouble();
+        ei = parcel.readDouble();
+        totalTaxableIncome = parcel.readDouble();
+        totalTaxPayed = parcel.readDouble();
+
+    }
+
 }
 
